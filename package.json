@@ -11,7 +11,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon ./back-end/app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
