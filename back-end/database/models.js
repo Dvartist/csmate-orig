@@ -27,4 +27,9 @@ let day = new Schema({
     collection: 'days'
 });
 
-module.exports = mongoose.model('days', day);
+let userSubscriptions = new Schema({
+    
+}, {collections: 'userSubscriptions'})
+
+module.exports.days = mongoose.model('days', day);
+module.exports.userSubscriptions = mongoose.model('userSubscriptions',userSubscriptions);

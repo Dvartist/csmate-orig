@@ -1,5 +1,5 @@
 require('./database.js')();
-let daysModel =  require('./models.js');
+let daysModel =  require('./models.js').days;
 
 async function populateDB() {
     
