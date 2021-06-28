@@ -10,7 +10,8 @@ let course = new Schema({
 });
 
 let period = new Schema({
-    start_time: String,
+    start_hour: Number,
+    start_minute: Number,
     course: course,
     classroom_name: String
 }, {

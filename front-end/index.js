@@ -28,3 +28,13 @@ let registerServiceWorker = function
         }
     }
 }
+
+function getNextClass(){
+    
+    let uri = '/sendNotification'
+    let sendMessageRequest = new Request(uri, {
+        method: 'POST',
+    })
+    console.log('Sent Fetch Request')
+    fetch(sendMessageRequest);
+}

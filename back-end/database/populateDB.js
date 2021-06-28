@@ -1,14 +1,14 @@
 require('./database.js')();
 let daysModel =  require('./models.js').days;
 
-async function populateDB() {
+function populateDB() {
     
     daysModel.deleteMany()
     .then(
         () => {
             console.log("Successfully Emptied Database");
 
-            let monday = new daysModel({day: 1});
+            let monday = new daysModel({day: 0});
 
             mondayFirstCourse = {
                 course_code: "CSM 354",
@@ -17,7 +17,8 @@ async function populateDB() {
             }
 
             mondayFirstPeriod = {
-                start_time:"8:00am",
+                start_hour:12,
+                start_minute:0,
                 classroom_name:"SCB-FF1",
                 course: mondayFirstCourse
             }
@@ -29,7 +30,8 @@ async function populateDB() {
             }
 
             mondaySecondPeriod = {
-                start_time:"10:30am",
+                start_hour:13,
+                start_minute:30,
                 classroom_name:"SCB-FF1",
                 course: mondaySecondCourse
             }
@@ -46,20 +48,6 @@ async function populateDB() {
 
         }
     )
-    }
-
-
-function showNextClass(){
-
-    let currentDate = new Date();
-    let currentDay = currentDate.getDay();
-    let currentHour = currentDate.getHours();
-    let currentMinutes = currentDate.getMinutes();
-
-    daysModel.find({day:1}).exec(
-        (response) => console.log(response)
-    );
 }
 
 module.exports.populateDB = populateDB;
-module.exports.showNextClass = showNextClass;
