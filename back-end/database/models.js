@@ -2,35 +2,35 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let course = new Schema({
-    course_code: String,
-    course_name: String,
-    lecturer_name: String
-}, {
-    collection: 'courses'
+    courseCode: String,
+    courseName: String,
+    lecturerName: String
 });
 
 let period = new Schema({
-    start_hour: Number,
-    start_minute: Number,
-    course: course,
-    classroom_name: String
-}, {
-    collection:'periods'
+    startTime: String,
+    endTime: String,
+    lectureRoom: String,
+    course: course
 });
 
 let day = new Schema({
     day: {
         type:Number,
-        unique: true
     },
     periods:[period]
 }, {
     collection: 'days'
 });
 
-let userSubscriptions = new Schema({
-    
-}, {collections: 'userSubscriptions'})
+let users = new Schema({
+    userToken: {
+        type : String,
+        unique: true
+    }
+}, {    
+    collections: 'users'
+});
 
 module.exports.days = mongoose.model('days', day);
-module.exports.userSubscriptions = mongoose.model('userSubscriptions',userSubscriptions);
+module.exports.users = mongoose.model('users',users);

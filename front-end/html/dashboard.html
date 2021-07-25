@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-messaging.js"></script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    
+    <script src="/js/script.js"></script>
+
+    <link rel='stylesheet' type="text/css" href="/css/frameworks/bootstrap-4.1.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+
+</head>
+<body>
+    
+    <div class="container-fluid h-100">
+        
+        <div class="row">
+            <div class="col-12 p-3 text-center" id="halla-me">
+                    <div class="text-center h5">
+                        Halle Me
+                    </div> 
+            </div>
+        </div>
+
+        <div class="row">
+
+            <nav class="col-sm-3 flex-column align-content-stretch bg-info">
+               
+                <div class="p-2 text-center border-bottom">
+                    Timetable
+                </div>
+                <div class="p-2 text-center">
+                    Activities 2
+                </div>
+            </nav>
+
+            <div class="col-sm-9 bg-light">
+                <form class="row m-4 p-3 bg-secondary text-white">
+
+                    <h4 class="col-md-12 p-3">Current Lecture</h4>
+
+                    <div class="container-fluid col-md-5 m-0 mb-2 p-0"> 
+                        <div class="form-group row m-0">
+                            <label for="courseCode" class="col-md-6">Course Code: </label>
+                            <input name="courseCode" id="courseCode" value="N/A" class="form-control col-md-6" readonly />
+                        </div>
+                    </div>
+                    <div class="container-fluid col-md-6 ml-md-3 mb-2 p-0"> 
+                        <div class="form-group row m-0">
+                            <label for="courseName" class="col-md-5 pr-0">Course Name: </label>
+                            <input name="courseName" class="form-control col-md-7" value="N/A" readonly />
+                        </div>
+                    </div>
+                    <div class="container-fluid col-md-5 m-0 mb-2 p-0"> 
+                        <div class="form-group row m-0">
+                            <label for="startTime" class="col-md-6">Start Time: </label>
+                            <input name="startTime" class="form-control col-md-6" value="N/A" readonly />
+                        </div>
+                    </div>
+                    <div class="container-fluid col-md-6 ml-md-3 mb-2 p-0"> 
+                        <div class="form-group row m-0">
+                            <label for="endTime" class="col-md-5 pr-0">End Time: </label>
+                            <input name="endTime" class="form-control col-md-7" value="N/A" readonly />
+                        </div>
+                    </div>
+                    <div class="container-fluid col-md-5 m-0 mb-2 p-0"> 
+                        <div class="form-group row m-0">
+                            <label for="lectureRoom" class="col-md-6">Lecture Room: </label>
+                            <input name="lectureRoom" class="form-control col-md-6" value="N/A" readonly />
+                        </div>
+                    </div>
+                    <div class="container-fluid col-md-6 ml-md-3 mb-2 p-0"> 
+                        <div class="form-group row m-0">
+                            <label for="lecturerName" class="col-md-5 pr-0">Lecturer Name: </label>
+                            <input name="lecturerName" class="form-control col-md-7" value="N/A" readonly />
+                        </div>
+                    </div>
+            </form>
+
+            <form class="row m-4 p-3 bg-secondary text-white">
+
+                <h4 class="col-md-12 p-3">Next Lecture</h4>
+
+                <div class="container-fluid col-md-5 m-0 mb-2 p-0"> 
+                    <div class="form-group row m-0">
+                        <label for="courseCode" class="col-md-6">Course Code: </label>
+                        <input name="nextCourseCode" value="N/A" class="form-control col-md-6" readonly />
+                    </div>
+                </div>
+                <div class="container-fluid col-md-6 ml-md-3 mb-2 p-0"> 
+                    <div class="form-group row m-0">
+                        <label for="courseName" class="col-md-5 pr-0">Course Name: </label>
+                        <input name="nextCourseName" class="form-control col-md-7" value="N/A" readonly />
+                    </div>
+                </div>
+                <div class="container-fluid col-md-5 m-0 mb-2 p-0"> 
+                    <div class="form-group row m-0">
+                        <label for="startTime" class="col-md-6">Start Time: </label>
+                        <input name="nextStartTime" class="form-control col-md-6" value="N/A" readonly />
+                    </div>
+                </div>
+                <div class="container-fluid col-md-6 ml-md-3 mb-2 p-0"> 
+                    <div class="form-group row m-0">
+                        <label for="endTime" class="col-md-5 pr-0">End Time: </label>
+                        <input name="nextEndTime" class="form-control col-md-7" value="N/A" readonly />
+                    </div>
+                </div>
+                <div class="container-fluid col-md-5 m-0 mb-2 p-0"> 
+                    <div class="form-group row m-0">
+                        <label for="lectureRoom" class="col-md-6">Lecture Room: </label>
+                        <input name="nextLectureRoom" class="form-control col-md-6" value="N/A" readonly />
+                    </div>
+                </div>
+                <div class="container-fluid col-md-6 ml-md-3 mb-2 p-0"> 
+                    <div class="form-group row m-0">
+                        <label for="lecturerName" class="col-md-5 pr-0">Lecturer Name: </label>
+                        <input name="nextLecturerName" class="form-control col-md-7" value="N/A" readonly />
+                    </div>
+                </div>
+        </form>
+        </div>
+            </section>
+        </div>
+    </div>   
+
+
+</body>
+</html>
+
+<!--
+    <form>
+<div class=”form-group”>
+<label for=”exampleFormControlInput1”>Email address</label>
+<input type=”email” class=”form-control” id=”exampleFormControlInput1”
+placeholder=”name@example.com”>
+</div>
+-->

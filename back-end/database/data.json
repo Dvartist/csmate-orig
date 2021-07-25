@@ -1,0 +1,179 @@
+{
+  "lectureDays" : [
+    {
+      "day": 1,
+      "periods": [
+        {
+          "startTime": "08:00:00.000Z",
+          "endTime": "09:55:00.000Z",
+          "lectureRoom": "SCB-FF1",
+          "course": {
+            "courseCode": "CSM 354",
+            "courseName": "COMPUTER GRAPHICS",
+            "lecturerName": "N. USSIPH"
+          }
+        },
+        {
+          "startTime": "10:30:00.000Z",
+          "endTime": "12:25:00.000Z",
+          "lectureRoom": "SCB-FF1",
+          "course": {
+            "courseCode": "CSM 388",
+            "courseName": "DATA STRUCTURES II",
+            "lecturerName": "J.B. HAYFRON-ACQUAH"
+          }
+        },
+        {
+          "startTime": "13:00:00.000Z",
+          "endTime": "14:55:00.000Z",
+          "lectureRoom": "SCB-FF1",
+          "course": {
+            "courseCode": "CSM 352",
+            "courseName": "COMPUTER ARCHITECTURE",
+            "lecturerName": "D. ASAMOAH"
+          }
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "periods": [
+        {
+          "startTime": "10:30:00.000Z",
+          "endTime": "12:25:00.000Z",
+          "lectureRoom": "SCB-FF17",
+          "course": {
+            "courseCode": "CSM 388",
+            "courseName": "DATA STRUCTURES II",
+            "lecturerName": "J.B. HAYFRON-ACQUAH"
+          }
+        },
+        {
+          "startTime": "13:00:00.000Z",
+          "endTime": "14:55:00.000Z",
+          "lectureRoom": "SCB-FF6",
+          "course": {
+            "courseCode": "CSM 374",
+            "courseName": "REAL-TIME AND EMBEDDED SYSTEMS",
+            "lecturerName": "J.K. PANFORD"
+          }
+        },
+        {
+          "startTime": "15:00:00.000Z",
+          "endTime": "16:55:00.000Z",
+          "lectureRoom": "SCB-FF6",
+          "course": {
+            "courseCode": "CSM 354",
+            "courseName": "COMPUTER GRAPHICS",
+            "lecturerName": "N. USSIPH"
+          }
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "periods": [
+        {
+          "startTime": "08:00:00.000Z",
+          "endTime": "09:55:00.000Z",
+          "lectureRoom": "SCB-TF1",
+          "course": {
+            "courseCode": "CSM 394",
+            "courseName": "OPERATIONS RESEARCH II",
+            "lecturerName": "J. ACKORAH PRAH"
+          }
+        },
+        {
+          "startTime": "10:30:00.000Z",
+          "endTime": "12:25:00.000Z",
+          "lectureRoom": "SCB-FF24",
+          "course": {
+            "courseCode": "NULL",
+            "courseName": "SEMINAR CS",
+            "lecturerName": "ALL LECTURERS"
+          }
+        },
+        {
+          "startTime": "13:00:00.000Z",
+          "endTime": "14:55:00.000Z",
+          "lectureRoom": "SCB-SF1",
+          "course": {
+            "courseCode": "CSM 376",
+            "courseName": "RESEARCH METHODS AND IT PROJECT",
+            "lecturerName": "G. ABDUL-SALAM"
+          }
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "periods": [
+        {
+          "startTime": "08:00:00.000Z",
+          "endTime": "09:55:00.000Z",
+          "lectureRoom": "SCB-TF1",
+          "course": {
+            "courseCode": "CSM 374",
+            "courseName": "REAL-TIME AND EMBEDDED SYSTEMS",
+            "lecturerName": "J.K. PANFORD"
+          }
+        },
+        {
+          "startTime": "10:30:00.000Z",
+          "endTime": "12:25:00.000Z",
+          "lectureRoom": "SCB-SF1",
+          "course": {
+            "courseCode": "CSM 286",
+            "courseName": "ACCOUNTING II",
+            "lecturerName": "B. SARPONG DAQUAH"
+          }
+        },
+        {
+          "startTime": "13:00:00.000Z",
+          "endTime": "13:55:00.000Z",
+          "lectureRoom": "SCB-SF1",
+          "course": {
+            "courseCode": "CSM 394",
+            "courseName": "OPERATIONS RESEARCH II",
+            "lecturerName": "J. ACKORAH PRAH"
+          }
+        },
+        {
+          "startTime": "14:00:00.000Z",
+          "endTime": "14:55:00.000Z",
+          "lectureRoom": "SCB-FF17",
+          "course": {
+            "courseCode": "CSM 352",
+            "courseName": "COMPUTER ARCHITECTURE",
+            "lecturerName": "D. ASAMOAH"
+          }
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "periods": [
+        {
+          "startTime": "08:00:00.000Z",
+          "endTime": "09:55:00.000Z",
+          "lectureRoom": "DB3/DB4",
+          "course": {
+            "courseCode": "CSM 358",
+            "courseName": "E-COMMERCE",
+            "lecturerName": "F. TWUM"
+          }
+        },
+        {
+          "startTime": "10:30:00.000Z",
+          "endTime": "14:55:00.000Z",
+          "lectureRoom": "NULL",
+          "course": {
+            "courseCode": "CSM 366",
+            "courseName": "MINI PROJECT",
+            "lecturerName": "ALL LECTURERS"
+          }
+        }
+      ]
+    }
+  ]
+}
