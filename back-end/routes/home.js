@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.route('/').get((request, response) => {
 
-    redirectUserToUrl(response, '/html/dashboard.html');
+    redirectUserToUrl(response, '/html/login.html');
 
 });
 

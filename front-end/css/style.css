@@ -1,3 +1,25 @@
 #halla-me {
     background-color: lightblue;
 }
+
+#navbar-header {
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, rgb(74, 163, 253), rgb(204, 229, 255));
+}
+
+.nav-link:hover {
+    background-color: rgb(77, 77, 77) ;
+    color:white
+}
+
+.nav-link {
+    color: rgb(77, 77, 77) ;
+}
+
+#navbar {
+    background-color: rgb(204, 235, 255);
+}
+
+#lectureDetails {
+    background-color: rgb(77, 77, 77) ;
+}

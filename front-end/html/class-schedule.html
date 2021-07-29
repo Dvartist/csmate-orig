@@ -13,37 +13,59 @@
     
     <script src="/js/script.js"></script>
 
-    <link rel='stylesheet' type="text/css" href="/css/frameworks/bootstrap-4.1.1-dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel='stylesheet' type="text/css" href="../css/frameworks/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" />
 
 
 </head>
 <body>
     
-    <div class="container-fluid h-100">
-        
-        <div class="row">
-            <div class="col-12 p-3 text-center" id="halla-me">
-                    <div class="text-center h5">
-                        Halle Me
-                    </div> 
+    <div class="container-fluid p-0">
+
+        <div id="navbar-header" class="row navbar-color d-flex mx-0 border border-dark">
+
+            <p class="py-4 h5 m-0 pl-2 col-3">
+                ClassMate
+            </p>
+
+            <div class="ml-auto p-1 my-auto border border-dark mr-2 rounded-circle">
+                <i>
+                    <img src="../images/person-fill.svg" alt="Bootstrap" width="32" height="32">
+                </i>
             </div>
+
+            <p class="my-auto mr-3">
+                <a href="/templates/error-page/index.html" style="color:rgb(80, 80, 80)">Profile</a>
+            </p>
+
         </div>
 
         <div class="row">
 
-            <nav class="col-sm-3 flex-column align-content-stretch bg-info">
-               
-                <div class="p-2 text-center border-bottom">
-                    Timetable
-                </div>
-                <div class="p-2 text-center">
-                    Activities 2
+            <nav id="navbar" class="col-sm-2 flex-column navbar-color">
+                
+                <div class="container-fluid p-0 pr-2">
+                
+                    <div class="row ml-2 my-3 border-left border-dark">
+                        <a href="/html/class-schedule.html" class="nav-link">Class Schedule</a>
+                    </div>
+
+                    <div class="row mb-2 ml-2 border-left border-dark">
+                        <a href="/templates/error-page/index.html" class="nav-link">Notice Board</a>
+                    </div>
+
+                    <div class="row mb-2 ml-2 border-left border-dark">
+                        <a href="/templates/error-page/index.html" class="nav-link">Forum</a>
+                    </div>
                 </div>
             </nav>
 
-            <div class="col-sm-9 bg-light">
-                <form class="row m-4 p-3 bg-secondary text-white">
+            <div class="col-sm-10 bg-light">
+
+               
+
+                <form id="lectureDetails" class="row m-4 p-3 text-white">
 
                     <h4 class="col-md-12 p-3">Current Lecture</h4>
 
@@ -85,7 +107,7 @@
                     </div>
             </form>
 
-            <form class="row m-4 p-3 bg-secondary text-white">
+            <form id="lectureDetails" class="row m-4 p-3 text-white">
 
                 <h4 class="col-md-12 p-3">Next Lecture</h4>
 
