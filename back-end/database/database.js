@@ -4,7 +4,7 @@ const daysModel = require('./models').days;
 function start(){
     let mongoose = require('mongoose');
 
-    let databaseUri = process.env.LOCALDB_URI;
+    let databaseUri = process.env.REMOTEDB_URI;
 
     mongoose.connect(databaseUri, {useNewUrlParser: true, useUnifiedTopology:true, useCreateIndex : true}).then(
         (response) => { // eslint-disable-line

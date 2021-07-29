@@ -5,7 +5,6 @@ const getLectureAtTime = require('./getLectureAtTime').getLectureAtTime;
 async function sendNotification(){
 
     let date = new Date();
-    date.setHours(9,0,0,0)
     let lecture = await getLectureAtTime(date);
 
     let thereisMessage = !(lecture == null);
