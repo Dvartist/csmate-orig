@@ -60,7 +60,7 @@ async function sendNotification(){
 
 module.exports.start = () => {
 
-    const timeToCheckNotification = 5000;
+    const timeToCheckNotification = 10000;
 
     setInterval(
         async () => {

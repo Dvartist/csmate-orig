@@ -1,0 +1,4 @@
+POST https://halla-me.herokuapp.com/getLecture?time=now
+
+###
+POST http://localhost:3000/getLecture?time=now
