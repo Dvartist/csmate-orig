@@ -1,6 +1,4 @@
 const express = require('express');
-const http = require('http');
-const axios = require('axios');
 const router = express.Router();
 
 router.route('/').get((request, response) => {

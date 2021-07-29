@@ -5,19 +5,19 @@ const getLectureAtTime = require('./getLectureAtTime').getLectureAtTime;
 async function sendNotification(){
 
     let date = new Date();
-
+    date.setHours(9,0,0,0)
     let lecture = await getLectureAtTime(date);
 
-    let clickActionUri = 'http://localhost:3000';
-    let dbUsers = await users.find({});
+    let thereisMessage = !(lecture == null);
 
-    console.log(lecture);
-    let messageBody = `${lecture.course.courseCode} ${lecture.course.courseName} has started \n`;
-    messageBody = messageBody + `Room: ${lecture.lectureRoom}`;
+    if(thereisMessage){
 
-    let isMessage = lecture !== '{}';
+        let clickActionUri = '/';
+        let dbUsers = await users.find({});
 
-    if(isMessage){
+        let messageBody = `${lecture.course.courseCode} ${lecture.course.courseName} has started \n`;
+        messageBody = messageBody + `Room: ${lecture.lectureRoom}`;
+
 
         if(dbUsers.length !== 0){
 
@@ -28,7 +28,7 @@ async function sendNotification(){
                         method: 'POST',
                         headers: {
                             'Content-Type':'application/json',
-                            'Authorization': 'key=AAAAqYfe_Xs:APA91bHDGS0syupVE3-LsyAC8jm614IH9u1nH_WiURihf5EwXgzf5onfQ1fzA84pmrAeD95t9P2zbS5nJtaH8dji_tCMKglM6nuJgRDLeaxMkHvOnjQtVwQxS0r3U4yP8du4RhvFQDhx'
+                            'Authorization': `key=${process.env.FCM_AUTH}`
                         },
                         data : {
                             'notification': {
@@ -43,7 +43,7 @@ async function sendNotification(){
                     axios.request(messageEndpoint, messageRequestOptions)
                         .then(
                             (response) => { //eslint-disable-line
-                                console.log('Sent push message');
+                                //console.log('Sent push message');
                             }
                         )
                         .catch(
@@ -57,12 +57,11 @@ async function sendNotification(){
         }
 
     }
-
 }  
 
 module.exports.start = () => {
 
-    const timeToCheckNotification = 1800000;
+    const timeToCheckNotification = 5000;
 
     setInterval(
         async () => {

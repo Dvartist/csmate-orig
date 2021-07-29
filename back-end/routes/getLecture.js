@@ -7,10 +7,10 @@ router.route('/').post(
     async (request, response) => {
 
         let queryParams = request.query;
+        let date = new Date();
 
         if(queryParams.time == 'now'){
 
-            let date = new Date();
             let lecture = await getLectureAtTime(date);
             lecture = JSON.stringify(lecture);
             response.json(lecture);
@@ -18,7 +18,6 @@ router.route('/').post(
 
         }else if(queryParams.time == 'next'){
 
-            let date = new Date();
             let lecture = await getNextLectureFromNow(date);
             lecture = JSON.stringify(lecture);
             response.json(lecture);

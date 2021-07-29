@@ -1,24 +1,19 @@
+require('dotenv').config();
 const express = require('express');
-const session = require('express-session');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-const axios = require('axios')
+const PORT = process.env.PORT;
 
-require('./back-end/database/database.js').start();
+(
+    async () => {
+        await require('./back-end/database/database.js').start();
+    }
+)();
 
 app.use('/', express.static(path.join(__dirname, '/front-end/')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-
-app.use(session({
-    resave: true,
-    saveUninitialized: true,
-    secret: 'my-secret',
-    cookie: {
-        maxAge: 1209600000
-    }
-}));
 
 let routeHandler = {
     home: require('./back-end/routes/home'),
@@ -30,9 +25,9 @@ app.use('/', routeHandler.home);
 app.use('/getLecture', routeHandler.getLecture);
 app.use('/saveUserToDb', routeHandler.saveUserToDb);
 
-app.listen(3000, (err) => {
+app.listen(PORT, (err) => {
     if(err) console.log(err);
-    console.log('listening on port 3000');
+    console.log('listening on port ' + PORT);
 });
 
 require('./back-end/functions/sendNotification').start();

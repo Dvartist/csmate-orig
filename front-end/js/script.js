@@ -6,11 +6,11 @@ window.onload = async () => {
     const nextClassDetails = JSON.parse(await getClassDetails('/getLecture?time=next'));
 
 
-    if(currentClassDetails != 'null'){
+    if(currentClassDetails !== null){
         setCurrentClassData(currentClassDetails);
     }
 
-    if(nextClassDetails != 'null'){
+    if(nextClassDetails !== null){
         setNextClassData(nextClassDetails);
     }   
 };

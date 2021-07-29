@@ -17,11 +17,15 @@ async function getLectureAtTime(time){
         }} }
     ).exec();
 
-    let lecture = searchResults.periods[0];
     
-    if(lecture === undefined){
+
+    let noResults = searchResults == null;
+    let noLectures = searchResults.periods.length == 0;
+    
+    if(noResults || noLectures){
         return null;
     }else {
+        let lecture = searchResults.periods[0];
         return lecture;
     }
 }
