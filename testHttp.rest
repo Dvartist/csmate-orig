@@ -2,3 +2,6 @@ POST https://halla-me.herokuapp.com/getLecture?time=now
 
 ###
 POST http://localhost:3000/getLecture?time=now
+
+###
+GET http://localhost:3000/getExamDetails?week=1

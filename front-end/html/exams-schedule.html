@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/js/library/jquery-3.3.1.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/examSchedule.js"></script>
+
+
+    <link rel='stylesheet' type="text/css" href="/css/frameworks/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+</head>
+<body>
+    
+    <div class="container-fluid p-0">
+
+        <div id="navbar-header" class="row navbar-color d-flex mx-0 border border-dark">
+
+            <p class="py-4 h5 m-0 pl-2 col-3">
+                ClassMate
+            </p>
+
+            <div class="ml-auto p-1 my-auto border border-dark mr-2 rounded-circle">
+                <i>
+                    <img src="../images/person-fill.svg" alt="Bootstrap" width="32" height="32">
+                </i>
+            </div>
+
+            <p class="my-auto mr-3">
+                <a href="/templates/error-page/index.html" style="color:rgb(80, 80, 80)">Profile</a>
+            </p>
+
+        </div>
+
+        <div class="row">
+
+            <nav id="navbar" class="col-sm-2 flex-column navbar-color">
+                
+                <div class="container-fluid p-0 pr-2">
+                
+                    <div class="row ml-2 my-3 border-left border-dark">
+                        <a href="/html/class-schedule.html" class="nav-link">Class Schedule</a>
+                    </div>
+
+                    <div class="row ml-2 my-3 border-left border-dark">
+                        <a href="/html/exams-schedule.html" class="nav-link">Exams Schedule</a>
+                    </div>
+
+                    <div class="row mb-2 ml-2 border-left border-dark">
+                        <a href="/templates/error-page/index.html" class="nav-link">Notice Board</a>
+                    </div>
+
+                    <div class="row mb-2 ml-2 border-left border-dark">
+                        <a href="/templates/error-page/index.html" class="nav-link">Forum</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="col-sm-10 bg-light">
+
+               <div class="row d-flex justify-content-center mt-3">
+                   <button id="wk1Btn" class="btn mx-3 btn-primary" onclick="displayWeek1Details()">Week 1</button>
+                   <button id="wk2Btn" class="btn mx-3" onclick="displayWeek2Details()">Week 2</button>
+                </div>
+
+                <div class="row p-sm-4">
+                    <form id="lectureDetails" class="m-4 p-3 col-lg-5 col-md-9 text-white mx-auto">
+
+                        <h4 class="col-md-12 p-3">Monday </h4>
+    
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="1-course" class="col-md-3">Course Title: </label>
+                                <input name="1-course" value="N/A" class="form-control col-md-8" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="1-time" class="col-md-3">Time: </label>
+                                <input name="1-time" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="1-venue" class="col-md-3">Venue: </label>
+                                <input name="1-venue" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                    </form>
+
+                    <form id="lectureDetails" class="m-4 p-3 col-lg-5 col-md-9 text-white mx-auto">
+
+                        <h4 class="col-md-12 p-3">Tuesday</h4>
+    
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="2-course" class="col-md-3">Course Title: </label>
+                                <input name="2-course" value="N/A" class="form-control col-md-8" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="2-time" class="col-md-3">Time: </label>
+                                <input name="2-time" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="2-venue" class="col-md-3">Venue: </label>
+                                <input name="2-venue" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                    </form>
+
+                    <form id="lectureDetails" class="m-4 p-3 col-lg-5 col-md-9 text-white mx-auto">
+
+                        <h4 class="col-md-12 p-3">Wednesday</h4>
+    
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="3-course" class="col-md-3">Course Title: </label>
+                                <input name="3-course" id="courseCode" value="N/A" class="form-control col-md-8" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="3-time" class="col-md-3">Time: </label>
+                                <input name="3-time" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="3-venue" class="col-md-3">Venue: </label>
+                                <input name="3-venue" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                    </form>
+
+                    <form id="lectureDetails" class="m-4 p-3 col-lg-5 col-md-9 text-white mx-auto">
+
+                        <h4 class="col-md-12 p-3">Thursday</h4>
+    
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="4-course" class="col-md-3">Course Title: </label>
+                                <input name="4-course" id="courseCode" value="N/A" class="form-control col-md-8" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="4-time" class="col-md-3">Time: </label>
+                                <input name="4-time" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                        <div class="container-fluid col-md-12 m-0 mb-2 p-0"> 
+                            <div class="form-group row m-0">
+                                <label for="4-venue" class="col-md-3">Venue: </label>
+                                <input name="4-venue" class="form-control col-md-5" value="N/A" readonly />
+                            </div>
+                        </div>
+                    </form>
+                </div
+        </div>
+            </section>
+        </div>
+    </div>   
+
+
+</body>
+</html>
