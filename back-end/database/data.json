@@ -175,5 +175,93 @@
         }
       ]
     }
+  ],
+  "exams" : [
+    {"week":1,
+     "days":[
+       {
+         "day":1,
+         "course": {
+          "courseCode": "CSM 394",
+          "courseName": "OPERATIONS RESEARCH II",
+          "lecturerName": "J. ACKORAH PRAH"
+        },
+         "duration":"4:00PM - 6:00PM",
+         "venue":"PNB"
+       },
+       {
+        "day":2,
+        "course": {
+          "courseCode": "CSM 388",
+          "courseName": "DATA STRUCTURES II",
+          "lecturerName": "J.B. HAYFRON-ACQUAH"
+        },
+        "duration":"4:00PM - 6:00PM",
+        "venue":"SF1/SF7/SF8"
+      },
+      {
+        "day":3,
+        "course": {
+          "courseCode": "CSM 354",
+          "courseName": "COMPUTER GRAPHICS",
+          "lecturerName": "N. USSIPH"
+        },
+        "duration":"4:00PM - 6:00PM",
+        "venue":"SF8/SF20/SF19"
+      },
+      {
+        "day":4,
+        "course": {
+          "courseCode": "CSM 286",
+          "courseName": "ACCOUNTING II",
+          "lecturerName": "B. SARPONG DAQUAH"
+        },
+        "duration":"8:30AM - 10:30AM",
+        "venue":"TF1/TF34/SF1"
+      }
+     ]},
+     {"week":2,
+      "days":[
+        {
+          "day":1,
+          "course": {
+            "courseCode": "CSM 358",
+            "courseName": "E-COMMERCE",
+            "lecturerName": "F. TWUM"
+          },
+          "duration":"4:00PM - 6:00PM",
+          "venue":"TF1/TF34/SF1"
+        },
+        {
+         "day":2,
+         "course": {
+          "courseCode": "CSM 374",
+          "courseName": "REAL-TIME AND EMBEDDED SYSTEMS",
+          "lecturerName": "J.K. PANFORD"
+        },
+         "duration":"8:30AM - 10:30AM",
+         "venue":"FF1/FF5/FF24"
+       },
+       {
+         "day":3,
+         "course": {
+          "courseCode": "CSM 352",
+          "courseName": "COMPUTER ARCHITECTURE",
+          "lecturerName": "D. ASAMOAH"
+        },
+         "duration":"4:00PM - 6:00PM",
+         "venue":"PNB"
+       },
+       {
+         "day":4,
+         "course": {
+          "courseCode": "CSM 376",
+          "courseName": "RESEARCH METHODS AND IT PROJECT",
+          "lecturerName": "G. ABDUL-SALAM"
+        },
+          "duration":"4:00PM - 6:00PM",
+          "venue":"PNB"
+      }
+      ]}
   ]
 }

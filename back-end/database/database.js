@@ -1,20 +1,20 @@
-const lectureDays = require('./data.json').lectureDays;
+const lectureDays = require('./data').lectureDays;
 const daysModel = require('./models').days;
 
 function start(){
     let mongoose = require('mongoose');
 
-    let databaseUri = process.env.REMOTEDB_URI;
+    let databaseUri = process.env.LOCALDB_URI;
 
     mongoose.connect(databaseUri, {useNewUrlParser: true, useUnifiedTopology:true, useCreateIndex : true}).then(
         (response) => { // eslint-disable-line
             console.log('Database Connected');
-            populateDB();
+            populateDays();
         }
     ).catch(err =>  console.log(err));
 }
 
-async function populateDB() {
+async function populateDays() {
 
     const daysInDB = await daysModel.find({}).exec();
 

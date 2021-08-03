@@ -18,12 +18,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 let routeHandler = {
     home: require('./back-end/routes/home'),
     saveUserToDb: require('./back-end/routes/saveUserToDb'),
-    getLecture: require('./back-end/routes/getLecture')
+    getLecture: require('./back-end/routes/getLecture'),
+    getExamDetails: require('./back-end/routes/getExamDetails')
 };
 
 app.use('/', routeHandler.home);
 app.use('/getLecture', routeHandler.getLecture);
 app.use('/saveUserToDb', routeHandler.saveUserToDb);
+app.use('/getExamDetails', routeHandler.getExamDetails);
 
 app.listen(PORT, (err) => {
     if(err) console.log(err);
